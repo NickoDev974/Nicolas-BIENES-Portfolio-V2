@@ -188,7 +188,7 @@ li {
 }
 
 .projet a {
-  color: aliceblue;
+  color: black;
 }
 
 .projet a:hover {
@@ -201,7 +201,11 @@ li {
   flex-direction: column;
   align-items: center;
 }
-
+.projetBox img {
+  margin: 0 auto;
+  width: 100px;
+  height: auto;
+}
 .projetBox article {
   width: 80%;
 }
@@ -212,6 +216,32 @@ li {
   height: 8rem;
   margin: 0 auto;
 }
+/* Pour enlever la couleur de fond des points */
+
+.slick-dots li button:before {
+  display: none;
+  background-color: transparent; /* Enlève la couleur de fond */
+}
+
+/* Pour positionner les points en bas du carrousel */
+.slick-dots {
+  bottom: -30px; /* Ajustez cette valeur selon vos besoins */
+  background-color: transparent;
+}
+
+.slick-dots li button:before {
+  font-size: 12px; /* Ajustez la taille des points */
+  color: black; /* Change la couleur des points */
+}
+
+/* Optionnel: Pour centrer les points horizontalement */
+/* .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+} */
 
 /* footer */
 footer.contact {

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Slider from "react-slick";
 import "./App.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -67,6 +68,14 @@ function App() {
       }
     );
   }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <>
@@ -169,21 +178,25 @@ function App() {
       </section>
       <section className="projet white" id="projet">
         <h2>Mes projets</h2>
+
         <div className="projetBox">
-          <article>
-            <h3>
-              <a href="/">Mon PortFolio</a>
-            </h3>
-            <div className="imgProjet">imgage et lien du projet</div>
-          </article>
-          <article>
-            <h3>Titre du projet 2</h3>
-            <div className="imgProjet">imgage et lien du projet</div>
-          </article>
-          <article>
-            <h3>Titre du projet 3</h3>
-            <div className="imgProjet">imgage et lien du projet</div>
-          </article>
+          <Slider {...settings}>
+            <article>
+              <h3>
+                <a href="/">Mon PortFolio</a>
+              </h3>
+              <img src="./src/assets/logo/SQL.png" />
+              {/* <div className="imgProjet">imgage et lien du projet</div> */}
+            </article>
+            <article>
+              <h3>Titre du projet 2</h3>
+              <img src="./src/assets/logo/SQL.png" />
+            </article>
+            <article>
+              <h3>Titre du projet 3</h3>
+              <img src="./src/assets/logo/SQL.png" />
+            </article>
+          </Slider>
         </div>
       </section>
       <footer className="contact white" id="contact">

@@ -67,6 +67,8 @@ button:focus-visible {
   }
 } */
 
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 body {
   margin: 0;
   display: flex;
@@ -87,4 +89,28 @@ a {
 }
 .dark {
   color: aliceblue;
+}
+
+/* caroussel */
+/* Styles pour le carrousel */
+.slick-slider {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.projetBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projetBox article {
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
