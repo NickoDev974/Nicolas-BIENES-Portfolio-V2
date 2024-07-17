@@ -4,6 +4,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 import "./App.css";
 
+import moiImage from "./assets/moi.jpg";
+import htmlLogo from "./assets/logo/Html.png";
+import cssLogo from "./assets/logo/CSS.png";
+import jsLogo from "./assets/logo/JS.png";
+import reactLogo from "./assets/logo/REACT.png";
+import nodejsLogo from "./assets/logo/NODE-JS.png";
+import sqlLogo from "./assets/logo/SQL.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -118,7 +126,7 @@ function App() {
         ref={presentationRef}
       >
         <h2>A propos de moi</h2>
-        <img src="./src/assets/moi.jpg" alt="Photo de moi" />
+        <img src={moiImage} alt="Photo de moi" />
         <p ref={textRef}>
           Développeur Web Junior JavaScript avec une riche expérience dans le
           domaine de la vente et de la gestion, je suis passionné par la
@@ -150,27 +158,27 @@ function App() {
           <h2>Mes compétences</h2>
           <div>
             <div className="logoComp">
-              <img src="./src/assets/logo/Html.png" alt="logo HTML" />
+              <img src={htmlLogo} alt="logo HTML" />
               <h3>HTML</h3>
             </div>
             <div className="logoComp">
-              <img src="./src/assets/logo/CSS.png" alt="logo CSS" />
+              <img src={cssLogo} alt="logo CSS" />
               <h3>CSS</h3>
             </div>
             <div className="logoComp">
-              <img src="./src/assets/logo/JS.png" alt="logo JavaScript" />
+              <img src={jsLogo} alt="logo JavaScript" />
               <h3>JavaScript</h3>
             </div>
             <div className="logoComp">
-              <img src="./src/assets/logo/REACT.png" alt="logo React" />
+              <img src={reactLogo} alt="logo React" />
               <h3>React</h3>
             </div>
             <div className="logoComp">
-              <img src="./src/assets/logo/NODE-JS.png" alt="logo NodeJS" />
+              <img src={nodejsLogo} alt="logo NodeJS" />
               <h3>NodeJS</h3>
             </div>
             <div className="logoComp">
-              <img src="./src/assets/logo/SQL.png" alt="logo SQL" />
+              <img src={sqlLogo} alt="logo SQL" />
               <h3>SQL</h3>
             </div>
           </div>
