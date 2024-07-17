@@ -4,13 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 import "./App.css";
 
-import moiImage from "/Nicolas-BIENES-Portfolio/src/assets/moi.jpg";
-import htmlLogo from "/Nicolas-BIENES-Portfolio/src/assets/logo/Html.png";
-import cssLogo from "/Nicolas-BIENES-Portfolio/src/assets/logo/CSS.png";
-import jsLogo from "/Nicolas-BIENES-Portfolio/src/assets/logo/JS.png";
-import reactLogo from "/Nicolas-BIENES-Portfolio/src/assets/logo/REACT.png";
-import nodejsLogo from "/Nicolas-BIENES-Portfolio/src/assets/logo/NODE-JS.png";
-import sqlLogo from "/Nicolas-BIENES-Portfolio/src/assets/logo/SQL.png";
+import moiImage from "./assets/moi.jpg";
+import htmlLogo from "./assets/logo/Html.png";
+import cssLogo from "./assets/logo/CSS.png";
+import jsLogo from "./assets/logo/JS.png";
+import reactLogo from "./assets/logo/REACT.png";
+import nodejsLogo from "./assets/logo/NODE-JS.png";
+import sqlLogo from "./assets/logo/SQL.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
