@@ -126,7 +126,7 @@ function App() {
         ref={presentationRef}
       >
         <h2>A propos de moi</h2>
-        <img src="./public/moi.jpg" alt="Photo de moi" />
+        <img src="/moi.jpg" alt="Photo de moi" />
         <p ref={textRef}>
           Développeur Web Junior JavaScript avec une riche expérience dans le
           domaine de la vente et de la gestion, je suis passionné par la
@@ -158,27 +158,27 @@ function App() {
           <h2>Mes compétences</h2>
           <div>
             <div className="logoComp">
-              <img src="./public/logo/Html.png" alt="logo HTML" />
+              <img src="/logo/Html.png" alt="logo HTML" />
               <h3>HTML</h3>
             </div>
             <div className="logoComp">
-              <img src="./public/logo/CSS.png" alt="logo CSS" />
+              <img src="/logo/CSS.png" alt="logo CSS" />
               <h3>CSS</h3>
             </div>
             <div className="logoComp">
-              <img src="./public/logo/JS.png" alt="logo JavaScript" />
+              <img src="/logo/JS.png" alt="logo JavaScript" />
               <h3>JavaScript</h3>
             </div>
             <div className="logoComp">
-              <img src="./public/logo/REACT.png" alt="logo React" />
+              <img src="/logo/REACT.png" alt="logo React" />
               <h3>React</h3>
             </div>
             <div className="logoComp">
-              <img src="./public/logo/NODE-JS.png" alt="logo NodeJS" />
+              <img src="/logo/NODE-JS.png" alt="logo NodeJS" />
               <h3>NodeJS</h3>
             </div>
             <div className="logoComp">
-              <img src="./public/logo/SQL.png" alt="logo SQL" />
+              <img src="/logo/SQL.png" alt="logo SQL" />
               <h3>SQL</h3>
             </div>
           </div>
@@ -193,16 +193,16 @@ function App() {
               <h3>
                 <a href="/">Mon PortFolio</a>
               </h3>
-              <img src="./public/logo/SQL.png" />
+              <img src="/logo/SQL.png" />
               <p>Blabla sur les techno utilisee </p>
             </article>
             <article>
               <h3>Titre du projet 2</h3>
-              <img src="./public/logo/SQL.png" />
+              <img src="/logo/SQL.png" />
             </article>
             <article>
               <h3>Titre du projet 3</h3>
-              <img src="./public/logo/SQL.png" />
+              <img src="/logo/SQL.png" />
             </article>
           </Slider>
         </div>
