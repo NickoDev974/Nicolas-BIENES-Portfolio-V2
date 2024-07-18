@@ -4,13 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 import "./App.css";
 
-import moiImage from "./assets/moi.jpg";
-import htmlLogo from "./assets/logo/Html.png";
-import cssLogo from "./assets/logo/CSS.png";
-import jsLogo from "./assets/logo/JS.png";
-import reactLogo from "./assets/logo/REACT.png";
-import nodejsLogo from "./assets/logo/NODE-JS.png";
-import sqlLogo from "./assets/logo/SQL.png";
+// import moiImage from "./assets/moi.jpg";
+// import htmlLogo from "./assets/logo/Html.png";
+// import cssLogo from "./assets/logo/CSS.png";
+// import jsLogo from "./assets/logo/JS.png";
+// import reactLogo from "./assets/logo/REACT.png";
+// import nodejsLogo from "./assets/logo/NODE-JS.png";
+// import sqlLogo from "./assets/logo/SQL.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,7 +126,7 @@ function App() {
         ref={presentationRef}
       >
         <h2>A propos de moi</h2>
-        <img src={moiImage} alt="Photo de moi" />
+        <img src="./public/moi.jpg" alt="Photo de moi" />
         <p ref={textRef}>
           Développeur Web Junior JavaScript avec une riche expérience dans le
           domaine de la vente et de la gestion, je suis passionné par la
@@ -158,27 +158,27 @@ function App() {
           <h2>Mes compétences</h2>
           <div>
             <div className="logoComp">
-              <img src={htmlLogo} alt="logo HTML" />
+              <img src="./public/logo/Html.png" alt="logo HTML" />
               <h3>HTML</h3>
             </div>
             <div className="logoComp">
-              <img src={cssLogo} alt="logo CSS" />
+              <img src="./public/logo/CSS.png" alt="logo CSS" />
               <h3>CSS</h3>
             </div>
             <div className="logoComp">
-              <img src={jsLogo} alt="logo JavaScript" />
+              <img src="./public/logo/JS.png" alt="logo JavaScript" />
               <h3>JavaScript</h3>
             </div>
             <div className="logoComp">
-              <img src={reactLogo} alt="logo React" />
+              <img src="./public/logo/REACT.png" alt="logo React" />
               <h3>React</h3>
             </div>
             <div className="logoComp">
-              <img src={nodejsLogo} alt="logo NodeJS" />
+              <img src="./public/logo/NODE-JS.png" alt="logo NodeJS" />
               <h3>NodeJS</h3>
             </div>
             <div className="logoComp">
-              <img src={sqlLogo} alt="logo SQL" />
+              <img src="./public/logo/SQL.png" alt="logo SQL" />
               <h3>SQL</h3>
             </div>
           </div>
@@ -193,16 +193,16 @@ function App() {
               <h3>
                 <a href="/">Mon PortFolio</a>
               </h3>
-              <img src={sqlLogo} />
+              <img src="./public/logo/SQL.png" />
               <p>Blabla sur les techno utilisee </p>
             </article>
             <article>
               <h3>Titre du projet 2</h3>
-              <img src={sqlLogo} />
+              <img src="./public/logo/SQL.png" />
             </article>
             <article>
               <h3>Titre du projet 3</h3>
-              <img src={sqlLogo} />
+              <img src="./public/logo/SQL.png" />
             </article>
           </Slider>
         </div>
