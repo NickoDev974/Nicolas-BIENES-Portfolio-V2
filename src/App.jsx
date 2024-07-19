@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 import "./App.css";
 
+import logoMoi from "./assets/logo/Logo-nico.png";
 import moiImage from "./assets/moi.jpg";
 import htmlLogo from "./assets/logo/Html.png";
 import cssLogo from "./assets/logo/CSS.png";
@@ -11,6 +12,8 @@ import jsLogo from "./assets/logo/JS.png";
 import reactLogo from "./assets/logo/REACT.png";
 import nodejsLogo from "./assets/logo/NODE-JS.png";
 import sqlLogo from "./assets/logo/SQL.png";
+import porfolio from "./assets/IMG-porfolio.png";
+import uaLogo from "./assets/ua-image.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,6 +91,7 @@ function App() {
   return (
     <>
       <header>
+        <img src={logoMoi} className="logoMoi" />
         <nav>
           <button
             className="burger-menu"
@@ -189,16 +193,17 @@ function App() {
 
         <div className="projetBox">
           <Slider {...settings}>
-            <article>
+            <article className="portfolio">
               <h3>
                 <a href="/">Mon PortFolio</a>
               </h3>
-              <img src={sqlLogo} />
-              <p>Blabla sur les techno utilisee </p>
+              <img src={porfolio} />
+              <p>PortFolio | Site Developpeur </p>
             </article>
             <article>
-              <h3>Titre du projet 2</h3>
-              <img src={sqlLogo} />
+              <h3>Univers Aquatique</h3>
+              <img src={uaLogo} />
+              <p>Projet de Formation | Site Fullstack </p>
             </article>
             <article>
               <h3>Titre du projet 3</h3>
