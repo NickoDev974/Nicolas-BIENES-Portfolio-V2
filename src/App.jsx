@@ -18,7 +18,6 @@ import uaLogo from "./assets/ua-image.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  const [count, setCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -26,6 +25,138 @@ function App() {
     email: "",
     message: "",
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const projects = [
+    {
+      title: "My PortFolio",
+      description: "PortFolio | Site Developpeur",
+      img: porfolio,
+      details: (
+        <>
+          <img
+            src={porfolio}
+            alt="PortFolio"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <p>
+            Here is an overview of my portfolio. You can view some of my recent
+            projects and learn more about my skills and experience.
+          </p>
+          <h2>Stacks</h2>
+          <p>
+            For the Front-End I used : Html / CSS / SASS / JavaScrip / React
+          </p>
+          <p>
+            <img
+              src={htmlLogo}
+              alt="HTML Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+            <img
+              src={cssLogo}
+              alt="CSS Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+            <img
+              src={jsLogo}
+              alt="JavasCrip Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+            <img
+              src={reactLogo}
+              alt="React Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Univers Aquatique",
+      description: "Projet de Formation | Site Fullstack",
+      img: uaLogo,
+      details: (
+        <>
+          <img
+            src={uaLogo}
+            alt="Web site Univers Aquatique"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <div
+            style={{ width: "100%", height: "100px", backgroundColor: "green" }}
+          >
+            ici il y aura la video de presentation{" "}
+          </div>
+          <p>
+            As part of my Fullstack JavaScript developer diploma, I designed and
+            developed a comprehensive website. This project includes:
+            <br /> • A showcase site: An elegant platform to present the company
+            and each store in detail. <br />• An assistance tool: An interactive
+            feature allowing clients to calculate the necessary aquarium volumes
+            and appropriate treatments. <br />• An e-commerce section: <br />A
+            user-friendly online shopping space to facilitate transactions and
+            product management. <br />
+            This project demonstrates my skills in fullstack web development,
+            integrating presentation, user interaction, and online commerce
+            functionalities.
+          </p>
+          <h2>Stacks</h2>
+          <article>
+            <h3>Front-End Stacks</h3>
+            <p>
+              For the Front-End I used : Html / CSS / SASS / JavaScrip / React
+            </p>
+            <div>
+              <img
+                src={htmlLogo}
+                alt="HTML Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+
+              <img
+                src={cssLogo}
+                alt="CSS Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+              <img
+                src={jsLogo}
+                alt="JavaScrip Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+              <img
+                src={reactLogo}
+                alt="React Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+            </div>
+          </article>
+          <article>
+            <h3>Back-End Stacks</h3>
+            <p>For the Front-End I used : NodeJS / MySQL</p>
+            <div>
+              <img
+                src={nodejsLogo}
+                alt="Node JS Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+              <img
+                src={sqlLogo}
+                alt="SQL Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+            </div>
+          </article>
+        </>
+      ),
+    },
+    {
+      title: "Titre du projet 3",
+      img: sqlLogo,
+      details: "Details about the third project...",
+    },
+  ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +165,6 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     fetch("https://formspree.io/f/mrbzbkqr", {
       method: "POST",
       headers: {
@@ -49,14 +179,14 @@ function App() {
     })
       .then((response) => {
         if (response.ok) {
-          alert("Message envoyé avec succès !");
+          alert("Message sent successfully!");
         } else {
-          alert("Une erreur s'est produite. Veuillez réessayer.");
+          alert("An error occurred. Please try again.");
         }
       })
       .catch((error) => {
-        console.error("Erreur lors de l'envoi du formulaire :", error);
-        alert("Une erreur s'est produite. Veuillez réessayer.");
+        console.error("Error sending form:", error);
+        alert("An error occurred. Please try again.");
       });
   };
 
@@ -88,10 +218,20 @@ function App() {
     slidesToScroll: 1,
   };
 
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <>
-      <header>
-        <img src={logoMoi} className="logoMoi" />
+      <header id="header">
+        <img src={logoMoi} className="logoMoi" alt="Logo" />
         <nav>
           <button
             className="burger-menu"
@@ -101,16 +241,16 @@ function App() {
           </button>
           <ul className={menuOpen ? "menu-open" : ""}>
             <li>
-              <a href="/">Home</a>
+              <a href="#header">Home</a>
             </li>
             <li>
               <a href="#aboutMe">About Me</a>
             </li>
             <li>
-              <a href="#competences">Mes competences</a>
+              <a href="#competences">My Skills</a>
             </li>
             <li>
-              <a href="#projet">Mes projets</a>
+              <a href="#projet">My Projects</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -120,8 +260,24 @@ function App() {
       </header>
       <section className="who">
         <article className="content">
-          <h1>Nicolas BIENES</h1>
-          <p>Developpeur Fullstack JavaScript</p>
+          {/* <h1>Nicolas BIENES</h1> */}
+          <h1 className="loader">
+            <span className="lettre">N</span>
+            <span className="lettre">i</span>
+            <span className="lettre">c</span>
+            <span className="lettre">o</span>
+            <span className="lettre">l</span>
+            <span className="lettre">a</span>
+            <span className="lettre">s</span>
+            <span className="lettre"> </span>
+            <span className="lettre">B</span>
+            <span className="lettre">I</span>
+            <span className="lettre">E</span>
+            <span className="lettre">N</span>
+            <span className="lettre">E</span>
+            <span className="lettre">S</span>
+          </h1>
+          <p>Fullstack JavaScript Developer</p>
         </article>
       </section>
       <section
@@ -129,112 +285,106 @@ function App() {
         id="aboutMe"
         ref={presentationRef}
       >
-        <h2>A propos de moi</h2>
-        <img src={moiImage} alt="Photo de moi" />
+        <h2>About Me</h2>
+        <img src={moiImage} alt="Photo of me" />
         <p ref={textRef}>
-          Développeur Web Junior JavaScript avec une riche expérience dans le
-          domaine de la vente et de la gestion, je suis passionné par la
-          création de solutions web innovantes et efficaces. Après une carrière
-          réussie en tant que responsable de magasin spécialisé, où j’ai
-          développé des compétences solides en gestion d’équipe, en stratégie
-          commerciale et en marketing digital, j’ai décidé de me reconvertir
-          dans le développement web pour suivre ma passion pour la technologie.
+          Junior <strong>JavaScript Web Developer</strong> with a{" "}
+          <strong>rich experience in sales and management</strong>, I am
+          passionate about creating innovative and efficient web solutions.
+          After a successful career as a specialized store manager, where I
+          developed strong team management, business strategy, and digital
+          marketing skills, I decided to retrain in web development to follow my
+          passion for technology.
           <br />
           <br />
-          Diplômé en développement web full stack en 2024, je maîtrise les
-          technologies JavaScript, tant pour le front-end que pour le back-end.
-          Mon expérience pratique inclut la gestion de projets web et la
-          création d’applications interactives. Doté d’un excellent sens
-          relationnel et d’un souci du détail, je suis toujours à l’affût des
-          nouvelles tendances et technologies pour améliorer mes compétences et
-          offrir le meilleur à mes clients. Mon parcours unique m’a permis
-          d’acquérir une compréhension approfondie des besoins des utilisateurs
-          et des techniques de résolution de problèmes efficaces, faisant de moi
-          un atout précieux pour toute équipe de développement.
+          <strong>Graduated in full stack web development</strong> in 2024, I am
+          proficient in JavaScript technologies, both for{" "}
+          <strong>front-end and back-end</strong>. My practical experience
+          includes managing web projects and creating interactive applications.
+          With excellent interpersonal skills and an eye for detail, I am always
+          on the lookout for new trends and technologies to improve my skills
+          and offer the best to my clients. My unique background has given me a
+          deep understanding of user needs and effective problem-solving
+          techniques, making me a valuable asset to any development team.
           <br />
-          <br /> Je suis prêt à relever de nouveaux défis dans le domaine du
-          développement web et à contribuer à la réussite de projets ambitieux
-          et innovants.
+          <br /> I am ready to take on new challenges in web development and
+          contribute to the success of ambitious and innovative projects.
         </p>
       </section>
       <section className="competences" id="competences">
         <article>
-          <h2>Mes compétences</h2>
+          <h2>My Skills</h2>
           <div>
             <div className="logoComp">
-              <img src={htmlLogo} alt="logo HTML" />
+              <img src={htmlLogo} alt="HTML logo" />
               <h3>HTML</h3>
             </div>
             <div className="logoComp">
-              <img src={cssLogo} alt="logo CSS" />
+              <img src={cssLogo} alt="CSS logo" />
               <h3>CSS</h3>
             </div>
             <div className="logoComp">
-              <img src={jsLogo} alt="logo JavaScript" />
+              <img src={jsLogo} alt="JavaScript logo" />
               <h3>JavaScript</h3>
             </div>
             <div className="logoComp">
-              <img src={reactLogo} alt="logo React" />
+              <img src={reactLogo} alt="React logo" />
               <h3>React</h3>
             </div>
             <div className="logoComp">
-              <img src={nodejsLogo} alt="logo NodeJS" />
+              <img src={nodejsLogo} alt="NodeJS logo" />
               <h3>NodeJS</h3>
             </div>
             <div className="logoComp">
-              <img src={sqlLogo} alt="logo SQL" />
+              <img src={sqlLogo} alt="SQL logo" />
               <h3>SQL</h3>
             </div>
           </div>
         </article>
       </section>
       <section className="projet white" id="projet">
-        <h2>Mes projets</h2>
-
+        <h2>My Projects</h2>
         <div className="projetBox">
           <Slider {...settings}>
-            <article className="portfolio">
-              <h3>
-                <a href="/">Mon PortFolio</a>
-              </h3>
-              <img src={porfolio} />
-              <p>PortFolio | Site Developpeur </p>
-            </article>
-            <article>
-              <h3>Univers Aquatique</h3>
-              <img src={uaLogo} />
-              <p>Projet de Formation | Site Fullstack </p>
-            </article>
-            <article>
-              <h3>Titre du projet 3</h3>
-              <img src={sqlLogo} />
-            </article>
+            {projects.map((project, index) => (
+              <article key={index} className="portfolio">
+                <h3>
+                  <a href="#!" onClick={() => openModal(project)}>
+                    {project.title}
+                  </a>
+                </h3>
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  onClick={() => openModal(project)}
+                  style={{ cursor: "pointer" }}
+                />
+                <p>{project.description}</p>
+              </article>
+            ))}
           </Slider>
         </div>
       </section>
       <footer className="contact white" id="contact">
         <h2>Contact</h2>
-        <p>
-          Prenons contact ensemble, je vous répondrais dans les plus brefs
-          délais.{" "}
-        </p>
+        <p>Let's get in touch, I will respond as soon as possible.</p>
         <form onSubmit={handleSubmit}>
           <label>
-            Nom:
+            Name:
             <input
               type="text"
               name="name"
-              placeholder="Votre Nom"
+              placeholder="Your Name"
               value={formData.name}
               onChange={handleInputChange}
             />
           </label>
           <label>
-            Prénom:
+            First Name:
             <input
               type="text"
               name="firstname"
-              placeholder="Votre Prénom"
+              placeholder="Your First Name"
               value={formData.firstname}
               onChange={handleInputChange}
             />
@@ -244,7 +394,7 @@ function App() {
             <input
               type="email"
               name="email"
-              placeholder="Votre Email"
+              placeholder="Your Email"
               value={formData.email}
               onChange={handleInputChange}
             />
@@ -253,14 +403,27 @@ function App() {
             Message:
             <textarea
               name="message"
-              placeholder="Votre Message"
+              placeholder="Your Message"
               value={formData.message}
               onChange={handleInputChange}
             ></textarea>
           </label>
-          <button type="submit">Envoyer</button>
+          <button type="submit">Send</button>
         </form>
       </footer>
+
+      {isModalOpen && selectedProject && (
+        <div className={`modal ${isModalOpen ? "show" : ""}`}>
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
+            <h2>{selectedProject.title}</h2>
+            <p>{selectedProject.details}</p>
+            {/* Ajoutez plus de détails et des images si nécessaire */}
+          </div>
+        </div>
+      )}
     </>
   );
 }
