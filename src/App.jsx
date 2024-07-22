@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 import "./App.css";
 
+import cvFile from "./assets/Nicolas-BIENES-CV.pdf";
 import logoMoi from "./assets/logo/Logo-nico.png";
 import moiImage from "./assets/moi.jpg";
 import htmlLogo from "./assets/logo/Html.png";
@@ -134,7 +135,7 @@ function App() {
           </article>
           <article>
             <h3>Back-End Stacks</h3>
-            <p>For the Front-End I used : NodeJS / MySQL</p>
+            <p>For the Back-End I used : NodeJS / MySQL</p>
             <div>
               <img
                 src={nodejsLogo}
@@ -365,51 +366,67 @@ function App() {
           </Slider>
         </div>
       </section>
-      <footer className="contact white" id="contact">
-        <h2>Contact</h2>
-        <p>Let's get in touch, I will respond as soon as possible.</p>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name:
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label>
-            First Name:
-            <input
-              type="text"
-              name="firstname"
-              placeholder="Your First Name"
-              value={formData.firstname}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label>
-            Message:
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleInputChange}
-            ></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form>
+      <section className="cv-download" id="cv">
+        <h2>Download My CV</h2>
+        <a href={cvFile} download="Nicolas_BIENES_CV.pdf" className="cv-button">
+          Download CV
+        </a>
+      </section>
+      <section className="contact white" id="contact">
+        <article>
+          <h2>Contact</h2>
+          <p>Let's get in touch, I will respond as soon as possible.</p>
+          <form onSubmit={handleSubmit}>
+            <label>
+              Name:
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleInputChange}
+              />
+            </label>
+            <label>
+              First Name:
+              <input
+                type="text"
+                name="firstname"
+                placeholder="Your First Name"
+                value={formData.firstname}
+                onChange={handleInputChange}
+              />
+            </label>
+            <label>
+              Email:
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+            </label>
+            <label>
+              Message:
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleInputChange}
+              ></textarea>
+            </label>
+            <button type="submit">Send</button>
+          </form>
+        </article>
+      </section>
+      <footer>
+        <a href="#">
+          <h2>Linkedin</h2>
+        </a>
+        <a href="#">
+          <h2>GitHub</h2>
+        </a>
       </footer>
 
       {isModalOpen && selectedProject && (
