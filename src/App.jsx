@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 import "./App.css";
+import sampleVideo from "./assets/presentation-UA-web.mp4";
 
 import cvFile from "./assets/Nicolas-BIENES-CV.pdf";
 import logoMoi from "./assets/logo/Logo-nico.png";
@@ -83,16 +84,16 @@ function App() {
       img: uaLogo,
       details: (
         <>
-          <img
+          <video controls width="600" style={{ width: "100%", height: "auto" }}>
+            <source src={sampleVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* <img
             src={uaLogo}
             alt="Web site Univers Aquatique"
             style={{ width: "100%", height: "auto" }}
-          />
-          <div
-            style={{ width: "100%", height: "100px", backgroundColor: "green" }}
-          >
-            ici il y aura la video de presentation{" "}
-          </div>
+          /> */}
+
           <p>
             As part of my Fullstack JavaScript developer diploma, I designed and
             developed a comprehensive website. This project includes:
@@ -443,7 +444,7 @@ function App() {
             <span className="close" onClick={closeModal}>
               &times;
             </span>
-            <h2>{selectedProject.title}</h2>
+            <h3 className="titleModal">{selectedProject.title}</h3>
             <p>{selectedProject.details}</p>
             {/* Ajoutez plus de détails et des images si nécessaire */}
           </div>

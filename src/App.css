@@ -420,6 +420,10 @@ footer a {
   height: auto;
   border-radius: 25%;
 }
+video {
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+}
 
 /* --------------------burger menu------------------ */
 @media (max-width: 768px) {
@@ -613,5 +617,8 @@ footer a {
   }
   footer article {
     justify-content: space-around;
+  }
+  .titleModal {
+    font-size: 2rem;
   }
 }
