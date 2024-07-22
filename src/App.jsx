@@ -15,6 +15,9 @@ import nodejsLogo from "./assets/logo/NODE-JS.png";
 import sqlLogo from "./assets/logo/SQL.png";
 import porfolio from "./assets/IMG-porfolio.png";
 import uaLogo from "./assets/ua-image.jpg";
+import github from "./assets/logo/git-hub.png";
+import linkedin from "./assets/logo/linkedin.png";
+import construction from "./assets/page-en-construction.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +34,7 @@ function App() {
 
   const projects = [
     {
-      title: "My PortFolio",
+      title: "🔗 My PortFolio",
       description: "PortFolio | Site Developpeur",
       img: porfolio,
       details: (
@@ -75,7 +78,7 @@ function App() {
       ),
     },
     {
-      title: "Univers Aquatique",
+      title: "🔗 Univers Aquatique",
       description: "Projet de Formation | Site Fullstack",
       img: uaLogo,
       details: (
@@ -153,8 +156,8 @@ function App() {
       ),
     },
     {
-      title: "Titre du projet 3",
-      img: sqlLogo,
+      title: "🔗 Coming Soon...",
+      img: construction,
       details: "Details about the third project...",
     },
   ];
@@ -420,13 +423,18 @@ function App() {
           </form>
         </article>
       </section>
-      <footer>
-        <a href="#">
-          <h2>Linkedin</h2>
-        </a>
-        <a href="#">
-          <h2>GitHub</h2>
-        </a>
+      <footer className="dark">
+        <article>
+          <a href="https://www.linkedin.com/in/nicolas-bienes-3b4622173/">
+            <img src={linkedin} alt="logo LinkedIn" className="gitlogo" />
+            <p>LinkedIn</p>
+          </a>
+          <a href="https://github.com/NickoDev974">
+            <img src={github} alt="logo git hub" className="gitlogo" />
+            <p>GitHub</p>
+          </a>
+        </article>
+        <p>✉️ nicolas.bienes@gmail.com</p>
       </footer>
 
       {isModalOpen && selectedProject && (
