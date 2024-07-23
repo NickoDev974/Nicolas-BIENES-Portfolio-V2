@@ -554,7 +554,7 @@ video {
     gap: 5px;
     width: 100%;
     max-height: 150vh;
-    padding: 20px;
+    padding: 0;
   }
   .presentation h2 {
     grid-column: 1 / -1;
