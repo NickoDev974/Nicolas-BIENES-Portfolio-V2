@@ -8,7 +8,7 @@ import sampleVideo from "./assets/presentation-UA-web.mp4";
 import cvFile from "./assets/Nicolas-BIENES-CV.pdf";
 import logoMoi from "./assets/logo/Logo-nico.png";
 import moiImage from "./assets/moi.jpg";
-import htmlLogo from "./assets/logo/Html.png";
+import htmlLogo from "./assets/logo/html.png";
 import cssLogo from "./assets/logo/CSS.png";
 import jsLogo from "./assets/logo/JS.png";
 import reactLogo from "./assets/logo/REACT.png";
@@ -204,7 +204,7 @@ function App() {
       { opacity: 0, y: 1000 },
       {
         opacity: 1,
-        y: -100,
+        y: 0,
         scrollTrigger: {
           trigger: presentationRef.current,
           start: "top center",

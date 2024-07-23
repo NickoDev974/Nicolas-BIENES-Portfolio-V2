@@ -197,10 +197,10 @@ li {
   padding: 1rem;
   background: rgba(253, 253, 253, 0.99);
   color: black;
-  opacity: 0; /* Start hidden */
+  opacity: 0.6; /* Start hidden */
   text-align: justify;
   font-size: small;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -455,7 +455,7 @@ video {
 
 /* --------------------tablette------------------ */
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 909px) {
   /* Styles pour le section WHO */
   header {
     height: 3rem;
@@ -516,7 +516,7 @@ video {
 }
 /* --------------------desctop------------------ */
 
-@media (min-width: 1024px) {
+@media (min-width: 910px) {
   h2 {
     font-size: 4rem;
   }
@@ -533,10 +533,11 @@ video {
     height: 1000px;
   }
   .content {
-    font-size: 4rem;
+    font-size: 2rem;
   }
+
   .lettre {
-    font-size: 8rem;
+    font-size: 4rem;
   }
   /* Styles pour le section presentation */
   .presentation {
@@ -565,15 +566,15 @@ video {
     max-width: 100%;
     height: auto;
     margin-right: 2rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
-  .presentation strong {
+  /* .presentation strong {
     font-size: 2.5rem;
-  }
+  } */
   .competences article div {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   .logoComp {
     display: flex;
@@ -619,6 +620,19 @@ video {
     justify-content: space-around;
   }
   .titleModal {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1440px) {
+  .presentation p {
+    grid-column: 2;
+    align-self: start;
+    max-width: 100%;
+    height: auto;
+    margin-right: 2rem;
+    font-size: 2rem;
+  }
+  .presentation strong {
     font-size: 2rem;
   }
 }
