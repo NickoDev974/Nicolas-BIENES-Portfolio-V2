@@ -209,8 +209,9 @@ li {
   width: 100%;
 }
 .competences img:hover {
-  filter: drop-shadow(0 0 1rem white);
-  scale: 1.4;
+  filter: drop-shadow(5px 5px 5px white);
+  /* scale: 1.4; */
+  transform: skew(20deg, -20deg);
 }
 
 .competences {
@@ -364,6 +365,12 @@ li {
   border-radius: 10px;
   text-align: center;
 }
+.contact article {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px black;
+}
 
 .contact form {
   display: flex;
@@ -455,7 +462,7 @@ video {
 
 /* --------------------tablette------------------ */
 
-@media (min-width: 426px) and (max-width: 909px) {
+@media (min-width: 432px) and (max-width: 909px) {
   /* Styles pour le section WHO */
   header {
     height: 3rem;
@@ -475,7 +482,7 @@ video {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     gap: 5px;
-    width: 100%;
+    width: 90%;
     height: 100vh;
     padding: 20px;
   }
