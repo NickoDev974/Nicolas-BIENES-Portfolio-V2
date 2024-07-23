@@ -235,221 +235,228 @@ function App() {
 
   return (
     <>
-      <header id="header">
-        <img src={logoMoi} className="logoMoi" alt="Logo" />
-        <nav>
-          <button
-            className="burger-menu"
-            onClick={() => setMenuOpen(!menuOpen)}
+      <body className="whiteGrey">
+        <header id="header" className="black">
+          <img src={logoMoi} className="logoMoi" alt="Logo" />
+          <nav>
+            <button
+              className="burger-menu"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              &#9776;
+            </button>
+            <ul className={menuOpen ? "menu-open" : ""}>
+              <li>
+                <a href="#header">Home</a>
+              </li>
+              <li>
+                <a href="#aboutMe">About Me</a>
+              </li>
+              <li>
+                <a href="#competences">My Skills</a>
+              </li>
+              <li>
+                <a href="#projet">My Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <section className="who">
+          <article className="content">
+            {/* <h1>Nicolas BIENES</h1> */}
+            <h1 className="loader">
+              <span className="lettre">N</span>
+              <span className="lettre">i</span>
+              <span className="lettre">c</span>
+              <span className="lettre">o</span>
+              <span className="lettre">l</span>
+              <span className="lettre">a</span>
+              <span className="lettre">s</span>
+              <span className="lettre"> </span>
+              <span className="lettre">B</span>
+              <span className="lettre">I</span>
+              <span className="lettre">E</span>
+              <span className="lettre">N</span>
+              <span className="lettre">E</span>
+              <span className="lettre">S</span>
+            </h1>
+            <p>Fullstack JavaScript Developer</p>
+          </article>
+        </section>
+        <section
+          className="presentation whiteGrey"
+          id="aboutMe"
+          ref={presentationRef}
+        >
+          <h2>About Me</h2>
+          <img src={moiImage} alt="Photo of me" />
+          <p ref={textRef}>
+            Junior <strong>JavaScript Web Developer</strong> with a{" "}
+            <strong>rich experience in sales and management</strong>, I am
+            passionate about creating innovative and efficient web solutions.
+            After a successful career as a specialized store manager, where I
+            developed strong team management, business strategy, and digital
+            marketing skills, I decided to retrain in web development to follow
+            my passion for technology.
+            <br />
+            <br />
+            <strong>Graduated in full stack web development</strong> in 2024, I
+            am proficient in JavaScript technologies, both for{" "}
+            <strong>front-end and back-end</strong>. My practical experience
+            includes managing web projects and creating interactive
+            applications. With excellent interpersonal skills and an eye for
+            detail, I am always on the lookout for new trends and technologies
+            to improve my skills and offer the best to my clients. My unique
+            background has given me a deep understanding of user needs and
+            effective problem-solving techniques, making me a valuable asset to
+            any development team.
+            <br />
+            <br /> I am ready to take on new challenges in web development and
+            contribute to the success of ambitious and innovative projects.
+          </p>
+        </section>
+        <section className="competences darkGrey" id="competences">
+          <article>
+            <h2>My Skills</h2>
+            <div>
+              <div className="logoComp">
+                <img src={htmlLogo} alt="HTML logo" />
+                <h3>HTML</h3>
+              </div>
+              <div className="logoComp">
+                <img src={cssLogo} alt="CSS logo" />
+                <h3>CSS</h3>
+              </div>
+              <div className="logoComp">
+                <img src={jsLogo} alt="JavaScript logo" />
+                <h3>JavaScript</h3>
+              </div>
+              <div className="logoComp">
+                <img src={reactLogo} alt="React logo" />
+                <h3>React</h3>
+              </div>
+              <div className="logoComp">
+                <img src={nodejsLogo} alt="NodeJS logo" />
+                <h3>NodeJS</h3>
+              </div>
+              <div className="logoComp">
+                <img src={sqlLogo} alt="SQL logo" />
+                <h3>SQL</h3>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section className="projet whiteGrey" id="projet">
+          <h2>My Projects</h2>
+          <div className="projetBox">
+            <Slider {...settings}>
+              {projects.map((project, index) => (
+                <article key={index} className="portfolio">
+                  <h3>
+                    <a href="#!" onClick={() => openModal(project)}>
+                      {project.title}
+                    </a>
+                  </h3>
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    onClick={() => openModal(project)}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <p>{project.description}</p>
+                </article>
+              ))}
+            </Slider>
+          </div>
+        </section>
+        <section className="cv-download darkGrey" id="cv">
+          <h2>Download My CV</h2>
+          <a
+            href={cvFile}
+            download="Nicolas_BIENES_CV.pdf"
+            className="cv-button"
           >
-            &#9776;
-          </button>
-          <ul className={menuOpen ? "menu-open" : ""}>
-            <li>
-              <a href="#header">Home</a>
-            </li>
-            <li>
-              <a href="#aboutMe">About Me</a>
-            </li>
-            <li>
-              <a href="#competences">My Skills</a>
-            </li>
-            <li>
-              <a href="#projet">My Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <section className="who">
-        <article className="content">
-          {/* <h1>Nicolas BIENES</h1> */}
-          <h1 className="loader">
-            <span className="lettre">N</span>
-            <span className="lettre">i</span>
-            <span className="lettre">c</span>
-            <span className="lettre">o</span>
-            <span className="lettre">l</span>
-            <span className="lettre">a</span>
-            <span className="lettre">s</span>
-            <span className="lettre"> </span>
-            <span className="lettre">B</span>
-            <span className="lettre">I</span>
-            <span className="lettre">E</span>
-            <span className="lettre">N</span>
-            <span className="lettre">E</span>
-            <span className="lettre">S</span>
-          </h1>
-          <p>Fullstack JavaScript Developer</p>
-        </article>
-      </section>
-      <section
-        className="presentation white"
-        id="aboutMe"
-        ref={presentationRef}
-      >
-        <h2>About Me</h2>
-        <img src={moiImage} alt="Photo of me" />
-        <p ref={textRef}>
-          Junior <strong>JavaScript Web Developer</strong> with a{" "}
-          <strong>rich experience in sales and management</strong>, I am
-          passionate about creating innovative and efficient web solutions.
-          After a successful career as a specialized store manager, where I
-          developed strong team management, business strategy, and digital
-          marketing skills, I decided to retrain in web development to follow my
-          passion for technology.
-          <br />
-          <br />
-          <strong>Graduated in full stack web development</strong> in 2024, I am
-          proficient in JavaScript technologies, both for{" "}
-          <strong>front-end and back-end</strong>. My practical experience
-          includes managing web projects and creating interactive applications.
-          With excellent interpersonal skills and an eye for detail, I am always
-          on the lookout for new trends and technologies to improve my skills
-          and offer the best to my clients. My unique background has given me a
-          deep understanding of user needs and effective problem-solving
-          techniques, making me a valuable asset to any development team.
-          <br />
-          <br /> I am ready to take on new challenges in web development and
-          contribute to the success of ambitious and innovative projects.
-        </p>
-      </section>
-      <section className="competences" id="competences">
-        <article>
-          <h2>My Skills</h2>
-          <div>
-            <div className="logoComp">
-              <img src={htmlLogo} alt="HTML logo" />
-              <h3>HTML</h3>
-            </div>
-            <div className="logoComp">
-              <img src={cssLogo} alt="CSS logo" />
-              <h3>CSS</h3>
-            </div>
-            <div className="logoComp">
-              <img src={jsLogo} alt="JavaScript logo" />
-              <h3>JavaScript</h3>
-            </div>
-            <div className="logoComp">
-              <img src={reactLogo} alt="React logo" />
-              <h3>React</h3>
-            </div>
-            <div className="logoComp">
-              <img src={nodejsLogo} alt="NodeJS logo" />
-              <h3>NodeJS</h3>
-            </div>
-            <div className="logoComp">
-              <img src={sqlLogo} alt="SQL logo" />
-              <h3>SQL</h3>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section className="projet white" id="projet">
-        <h2>My Projects</h2>
-        <div className="projetBox">
-          <Slider {...settings}>
-            {projects.map((project, index) => (
-              <article key={index} className="portfolio">
-                <h3>
-                  <a href="#!" onClick={() => openModal(project)}>
-                    {project.title}
-                  </a>
-                </h3>
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  onClick={() => openModal(project)}
-                  style={{ cursor: "pointer" }}
+            Download CV
+          </a>
+        </section>
+        <section className="contact whiteGrey" id="contact">
+          <article>
+            <h2>Contact</h2>
+            <p>Let's get in touch, I will respond as soon as possible.</p>
+            <form onSubmit={handleSubmit}>
+              <label>
+                Name:
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                 />
-                <p>{project.description}</p>
-              </article>
-            ))}
-          </Slider>
-        </div>
-      </section>
-      <section className="cv-download" id="cv">
-        <h2>Download My CV</h2>
-        <a href={cvFile} download="Nicolas_BIENES_CV.pdf" className="cv-button">
-          Download CV
-        </a>
-      </section>
-      <section className="contact white" id="contact">
-        <article>
-          <h2>Contact</h2>
-          <p>Let's get in touch, I will respond as soon as possible.</p>
-          <form onSubmit={handleSubmit}>
-            <label>
-              Name:
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleInputChange}
-              />
-            </label>
-            <label>
-              First Name:
-              <input
-                type="text"
-                name="firstname"
-                placeholder="Your First Name"
-                value={formData.firstname}
-                onChange={handleInputChange}
-              />
-            </label>
-            <label>
-              Email:
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleInputChange}
-              />
-            </label>
-            <label>
-              Message:
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleInputChange}
-              ></textarea>
-            </label>
-            <button type="submit">Send</button>
-          </form>
-        </article>
-      </section>
-      <footer className="dark">
-        <article>
-          <a href="https://www.linkedin.com/in/nicolas-bienes-3b4622173/">
-            <img src={linkedin} alt="logo LinkedIn" className="gitlogo" />
-            <p>LinkedIn</p>
-          </a>
-          <a href="https://github.com/NickoDev974">
-            <img src={github} alt="logo git hub" className="gitlogo" />
-            <p>GitHub</p>
-          </a>
-        </article>
-        <p>✉️ nicolas.bienes@gmail.com</p>
-      </footer>
+              </label>
+              <label>
+                First Name:
+                <input
+                  type="text"
+                  name="firstname"
+                  placeholder="Your First Name"
+                  value={formData.firstname}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <label>
+                Email:
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <label>
+                Message:
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                ></textarea>
+              </label>
+              <button type="submit">Send</button>
+            </form>
+          </article>
+        </section>
+        <footer className="black">
+          <article>
+            <a href="https://www.linkedin.com/in/nicolas-bienes-3b4622173/">
+              <img src={linkedin} alt="logo LinkedIn" className="gitlogo" />
+              <p>LinkedIn</p>
+            </a>
+            <a href="https://github.com/NickoDev974">
+              <img src={github} alt="logo git hub" className="gitlogo" />
+              <p>GitHub</p>
+            </a>
+          </article>
+          <p>✉️ nicolas.bienes@gmail.com</p>
+        </footer>
 
-      {isModalOpen && selectedProject && (
-        <div className={`modal ${isModalOpen ? "show" : ""}`}>
-          <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h3 className="titleModal">{selectedProject.title}</h3>
-            <p>{selectedProject.details}</p>
-            {/* Ajoutez plus de détails et des images si nécessaire */}
+        {isModalOpen && selectedProject && (
+          <div className={`modal ${isModalOpen ? "show" : ""}`}>
+            <div className="modal-content">
+              <span className="close" onClick={closeModal}>
+                &times;
+              </span>
+              <h3 className="titleModal">{selectedProject.title}</h3>
+              <p>{selectedProject.details}</p>
+              {/* Ajoutez plus de détails et des images si nécessaire */}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </body>
     </>
   );
 }

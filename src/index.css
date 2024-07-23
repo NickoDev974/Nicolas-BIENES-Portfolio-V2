@@ -82,11 +82,25 @@ a {
   text-decoration: none;
 }
 .white {
-  color: black;
+  color: #1e1e1e;
   background-color: white;
+}
+.black {
+  color: rgb(212, 212, 212);
+  background-color: black;
 }
 .dark {
   color: aliceblue;
+  background-color: #323232;
+}
+.darkGrey {
+  background-color: #141414;
+  color: rgb(212, 212, 212);
+  padding-bottom: 2rem;
+}
+.whiteGrey {
+  background-color: #535353;
+  color: black;
 }
 
 /* caroussel */
@@ -113,6 +127,7 @@ a {
   margin-bottom: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  background-color: #494949;
 }
 
 strong {
