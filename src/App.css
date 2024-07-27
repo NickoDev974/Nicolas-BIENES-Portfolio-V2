@@ -10,6 +10,9 @@ header {
   margin: 1rem;
   width: 1.5rem;
 }
+/* h2 {
+  text-shadow: #fff 0 0 10px;
+} */
 
 nav {
   display: flex;
@@ -462,7 +465,8 @@ video {
 
 /* --------------------tablette------------------ */
 
-@media (min-width: 432px) and (max-width: 909px) {
+/* @media (min-width: 432px) and (max-width: 909px) { */
+@media (min-width: 432px) and (max-width: 768px) {
   /* Styles pour le section WHO */
   header {
     height: 3rem;
@@ -523,7 +527,8 @@ video {
 }
 /* --------------------desctop------------------ */
 
-@media (min-width: 910px) {
+/* @media (min-width: 910px) { */
+@media (min-width: 769px) {
   h2 {
     font-size: 4rem;
   }

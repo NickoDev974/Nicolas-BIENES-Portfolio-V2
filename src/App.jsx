@@ -35,50 +35,6 @@ function App() {
 
   const projects = [
     {
-      title: "🔗 My PortFolio",
-      description: "PortFolio | Site Developpeur",
-      img: porfolio,
-      details: (
-        <>
-          <img
-            src={porfolio}
-            alt="PortFolio"
-            style={{ width: "100%", height: "auto" }}
-          />
-          <p>
-            Here is an overview of my portfolio. You can view some of my recent
-            projects and learn more about my skills and experience.
-          </p>
-          <h2>Stacks</h2>
-          <p>
-            For the Front-End I used : Html / CSS / SASS / JavaScrip / React
-          </p>
-          <p>
-            <img
-              src={htmlLogo}
-              alt="HTML Logo"
-              style={{ width: "20%", height: "auto" }}
-            />
-            <img
-              src={cssLogo}
-              alt="CSS Logo"
-              style={{ width: "20%", height: "auto" }}
-            />
-            <img
-              src={jsLogo}
-              alt="JavasCrip Logo"
-              style={{ width: "20%", height: "auto" }}
-            />
-            <img
-              src={reactLogo}
-              alt="React Logo"
-              style={{ width: "20%", height: "auto" }}
-            />
-          </p>
-        </>
-      ),
-    },
-    {
       title: "🔗 Univers Aquatique",
       description: "Projet de Formation | Site Fullstack",
       img: uaLogo,
@@ -156,6 +112,51 @@ function App() {
         </>
       ),
     },
+    {
+      title: "🔗 My PortFolio",
+      description: "PortFolio | Site Developpeur",
+      img: porfolio,
+      details: (
+        <>
+          <img
+            src={porfolio}
+            alt="PortFolio"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <p>
+            Here is an overview of my portfolio. You can view some of my recent
+            projects and learn more about my skills and experience.
+          </p>
+          <h2>Stacks</h2>
+          <p>
+            For the Front-End I used : Html / CSS / SASS / JavaScrip / React
+          </p>
+          <p>
+            <img
+              src={htmlLogo}
+              alt="HTML Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+            <img
+              src={cssLogo}
+              alt="CSS Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+            <img
+              src={jsLogo}
+              alt="JavasCrip Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+            <img
+              src={reactLogo}
+              alt="React Logo"
+              style={{ width: "20%", height: "auto" }}
+            />
+          </p>
+        </>
+      ),
+    },
+
     {
       title: "🔗 Coming Soon...",
       img: construction,
@@ -290,7 +291,7 @@ function App() {
         id="aboutMe"
         ref={presentationRef}
       >
-        <h2>About Me</h2>
+        <h2 className="clearShadow">About Me</h2>
         <img src={moiImage} alt="Photo of me" />
         <p ref={textRef}>
           Junior <strong>JavaScript Web Developer</strong> with a{" "}
@@ -318,7 +319,7 @@ function App() {
       </section>
       <section className="competences darkGrey" id="competences">
         <article>
-          <h2>My Skills</h2>
+          <h2 className="darkShadow">My Skills</h2>
           <div>
             <div className="logoComp">
               <img src={htmlLogo} alt="HTML logo" />
@@ -348,7 +349,7 @@ function App() {
         </article>
       </section>
       <section className="projet whiteGrey" id="projet">
-        <h2>My Projects</h2>
+        <h2 className="clearShadow">My Projects</h2>
         <div className="projetBox">
           <Slider {...settings}>
             {projects.map((project, index) => (
@@ -371,7 +372,7 @@ function App() {
         </div>
       </section>
       <section className="cv-download darkGrey" id="cv">
-        <h2>Download My CV</h2>
+        <h2 className="darkShadow">Download My CV</h2>
         <a href={cvFile} download="Nicolas_BIENES_CV.pdf" className="cv-button">
           Download CV
         </a>

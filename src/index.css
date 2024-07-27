@@ -102,6 +102,12 @@ a {
   background-color: #535353;
   color: black;
 }
+.darkShadow {
+  text-shadow: 5px 5px 1px rgb(97, 97, 97);
+}
+.clearShadow {
+  text-shadow: 5px 5px 1px rgb(49, 49, 49);
+}
 
 /* caroussel */
 /* Styles pour le carrousel */
