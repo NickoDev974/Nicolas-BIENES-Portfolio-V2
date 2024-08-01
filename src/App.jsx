@@ -19,6 +19,10 @@ import uaLogo from "./assets/ua-image.jpg";
 import github from "./assets/logo/git-hub.png";
 import linkedin from "./assets/logo/linkedin.png";
 import construction from "./assets/page-en-construction.png";
+import iosApp1 from "./assets/PondManager1.png";
+import iosApp2 from "./assets/PondManager2.png";
+import iosApp3 from "./assets/PondManager3.png";
+import iosApp4 from "./assets/PondManager4.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -158,9 +162,43 @@ function App() {
     },
 
     {
-      title: "🔗 Coming Soon...",
-      img: construction,
-      details: "Details about the third project...",
+      title: "🔗 IOS app",
+      description: "IOS app | SwiftUI",
+      img: iosApp1,
+      details: (
+        <>
+          <img
+            src={iosApp1}
+            alt="IOS app "
+            style={{ width: "100%", height: "auto" }}
+          />
+          <p>
+            The Fish Pond Manager is an iOS application designed to help fish
+            pond owners track and manage pond maintenance efficiently. This app
+            provides tools for scheduling tasks, monitoring water quality, and
+            ensuring the health of your aquatic environment.
+          </p>
+          <h2>Stacks</h2>
+          <p>For this app I used : SwiftUI and Xcode</p>
+          <p>
+            <img
+              src={iosApp2}
+              alt="screenshot of app"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <img
+              src={iosApp3}
+              alt="screenshot of app"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <img
+              src={iosApp4}
+              alt="screenshot of app"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </p>
+        </>
+      ),
     },
   ];
 
