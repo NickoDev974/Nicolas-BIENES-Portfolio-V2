@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider from "react-slick";
 import "./App.css";
 import sampleVideo from "./assets/presentation-UA-web.mp4";
+import fishPondManager from "./assets/FishPondManager-demo.mov";
 
 import cvFile from "./assets/Nicolas-BIENES-CV.pdf";
 import logoMoi from "./assets/logo/Logo-nico.png";
@@ -167,11 +168,11 @@ function App() {
       img: iosApp1,
       details: (
         <>
-          <img
-            src={iosApp1}
-            alt="IOS app "
-            style={{ width: "100%", height: "auto" }}
-          />
+          <video controls width="600" style={{ width: "80%", height: "auto" }}>
+            <source src={fishPondManager} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
           <p>
             The Fish Pond Manager is an iOS application designed to help fish
             pond owners track and manage pond maintenance efficiently. This app
@@ -182,19 +183,24 @@ function App() {
           <p>For this app I used : SwiftUI and Xcode</p>
           <p>
             <img
+              src={iosApp1}
+              alt="IOS app "
+              style={{ width: "100%", height: "auto" }}
+            />
+            <img
               src={iosApp2}
               alt="screenshot of app"
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "25%", height: "auto", margin: "20px" }}
             />
             <img
               src={iosApp3}
               alt="screenshot of app"
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "25%", height: "auto", margin: "20px" }}
             />
             <img
               src={iosApp4}
               alt="screenshot of app"
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "25%", height: "auto", margin: "20px" }}
             />
           </p>
         </>
