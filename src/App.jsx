@@ -280,7 +280,7 @@ function App() {
 
   return (
     <div className="whiteGrey">
-      <header id="header" className="black">
+      <header id="header" className="header">
         <img src={logoMoi} className="logoMoi" alt="Logo" />
         <nav>
           <button
