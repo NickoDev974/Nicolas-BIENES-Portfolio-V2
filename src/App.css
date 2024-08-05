@@ -191,8 +191,9 @@ li {
 }
 
 .presentation img {
-  width: 100%;
+  width: 90%;
   height: auto;
+  margin: 2rem;
 }
 
 .presentation p {
@@ -540,7 +541,7 @@ video {
     height: 5rem;
   }
   nav a {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .logoMoi {
     width: 3rem;
@@ -562,6 +563,7 @@ video {
     grid-template-rows: auto 1fr;
     gap: 5px;
     width: 100%;
+    min-height: 800px;
     max-height: 150vh;
     padding: 0;
   }
@@ -614,6 +616,9 @@ video {
   }
   .projetBox p {
     font-size: 2rem;
+  }
+  .contact h2 {
+    font-size: 3rem;
   }
   .contact article {
     max-width: 30%;

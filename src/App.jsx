@@ -407,7 +407,7 @@ function App() {
                   src={project.img}
                   alt={project.title}
                   onClick={() => openModal(project)}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: "pointer", width: "80%", height: "auto" }}
                 />
                 <p>{project.description}</p>
               </article>
