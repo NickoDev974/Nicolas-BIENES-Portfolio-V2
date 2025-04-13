@@ -12,7 +12,7 @@ header {
 }
 .logoMoi {
   margin: 1rem;
-  width: 1.5rem;
+  width: 3.5rem;
 }
 /* h2 {
   text-shadow: #fff 0 0 10px;
@@ -546,7 +546,7 @@ video {
     font-size: 1rem;
   }
   .logoMoi {
-    width: 3rem;
+    width: 4rem;
   }
   .who {
     height: 1000px;

@@ -7,7 +7,7 @@ import sampleVideo from "./assets/presentation-UA-web.mp4";
 import fishPondManager from "./assets/FishPondManager-demo.mov";
 
 import cvFile from "./assets/Nicolas-BIENES-CV.pdf";
-import logoMoi from "./assets/logo/Logo-nico.png";
+import logoMoi from "/logoBN.png";
 import moiImage from "./assets/moi.jpg";
 import htmlLogo from "./assets/logo/html.png";
 import cssLogo from "./assets/logo/CSS.png";
@@ -24,6 +24,11 @@ import iosApp1 from "./assets/PondManager1.png";
 import iosApp2 from "./assets/PondManager2.png";
 import iosApp3 from "./assets/PondManager3.png";
 import iosApp4 from "./assets/PondManager4.png";
+import AquaCalulIOS from "./assets/AppIOS.png";
+import Aquacalcul1 from "./assets/WebApp1.jpg";
+import Aquacalcul2 from "./assets/WebApp2.jpg";
+import Aquacalcul3 from "./assets/WebApp3.jpg";
+import WebAppPC from "./assets/WebAppPC.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +50,9 @@ function App() {
       img: uaLogo,
       details: (
         <>
+          <a href="https://www.universaquatique-reunion.com/">
+            🔗🔗 Link to the website 🔗🔗
+          </a>
           <video controls width="600" style={{ width: "100%", height: "auto" }}>
             <source src={sampleVideo} type="video/mp4" />
             Your browser does not support the video tag.
@@ -203,6 +211,77 @@ function App() {
               style={{ width: "25%", height: "auto", margin: "20px" }}
             />
           </p>
+        </>
+      ),
+    },
+    {
+      title: "🔗 Aqua-Calcul",
+      description: "Projet utilitaire | Site for productivity",
+      img: WebAppPC,
+      details: (
+        <>
+          <a href="https://nickodev974.github.io/AquaCalcul/">
+            🔗🔗 Link to the website 🔗🔗
+          </a>
+          <img
+            src={Aquacalcul1}
+            alt="Web site Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <img
+            src={Aquacalcul2}
+            alt="Web site Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <img
+            src={Aquacalcul3}
+            alt="Web site Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <p>IOS version APP in SwiftUI</p>
+          <img
+            src={AquaCalulIOS}
+            alt="IOS App Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+
+          <p>
+            This website is designed to help both collaborators and customers
+            easily perform calculations for pond volume, water treatment, and
+            custom liner cutting. With a user-friendly interface, it simplifies
+            complex measurements, ensuring accurate results for optimal pond
+            management.
+          </p>
+          <h2>Stacks</h2>
+          <article>
+            <h3>Front-End Stacks</h3>
+            <p>
+              For the Front-End I used : Html / CSS / SASS / JavaScrip / React
+            </p>
+            <div>
+              <img
+                src={htmlLogo}
+                alt="HTML Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+
+              <img
+                src={cssLogo}
+                alt="CSS Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+              <img
+                src={jsLogo}
+                alt="JavaScrip Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+              <img
+                src={reactLogo}
+                alt="React Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+            </div>
+          </article>
         </>
       ),
     },
