@@ -29,6 +29,11 @@ import Aquacalcul1 from "./assets/WebApp1.jpg";
 import Aquacalcul2 from "./assets/WebApp2.jpg";
 import Aquacalcul3 from "./assets/WebApp3.jpg";
 import WebAppPC from "./assets/WebAppPC.png";
+import GestionB1 from "./assets/GestionB-1.png";
+import GestionB2 from "./assets/GestionB-2.png";
+import GestionB3 from "./assets/GestionB-3.png";
+import GestionB4 from "./assets/GestionB-4.png";
+import firebaseLogo from "./assets/logo/firebase.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +49,7 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+    //Univers Aquatique WebSite Front
     {
       title: "🔗 Univers Aquatique",
       description: "Projet de Formation | Site Fullstack",
@@ -62,69 +68,70 @@ function App() {
             alt="Web site Univers Aquatique"
             style={{ width: "100%", height: "auto" }}
           /> */}
-
-          <p>
-            As part of my Fullstack JavaScript developer diploma, I designed and
-            developed a comprehensive website. This project includes:
-            <br /> • A showcase site: An elegant platform to present the company
-            and each store in detail. <br />• An assistance tool: An interactive
-            feature allowing clients to calculate the necessary aquarium volumes
-            and appropriate treatments. <br />• An e-commerce section: <br />A
-            user-friendly online shopping space to facilitate transactions and
-            product management. <br />
-            This project demonstrates my skills in fullstack web development,
-            integrating presentation, user interaction, and online commerce
-            functionalities.
-          </p>
-          <h2>Stacks</h2>
-          <article>
-            <h3>Front-End Stacks</h3>
+          <div>
             <p>
-              For the Front-End I used : Html / CSS / SASS / JavaScrip / React
+              As part of my Fullstack JavaScript developer diploma, I designed
+              and developed a comprehensive website. This project includes:
+              <br /> • A showcase site: An elegant platform to present the
+              company and each store in detail. <br />• An assistance tool: An
+              interactive feature allowing clients to calculate the necessary
+              aquarium volumes and appropriate treatments. <br />• An e-commerce
+              section: <br />A user-friendly online shopping space to facilitate
+              transactions and product management. <br />
+              This project demonstrates my skills in fullstack web development,
+              integrating presentation, user interaction, and online commerce
+              functionalities.
             </p>
-            <div>
-              <img
-                src={htmlLogo}
-                alt="HTML Logo"
-                style={{ width: "20%", height: "auto" }}
-              />
-
-              <img
-                src={cssLogo}
-                alt="CSS Logo"
-                style={{ width: "20%", height: "auto" }}
-              />
-              <img
-                src={jsLogo}
-                alt="JavaScrip Logo"
-                style={{ width: "20%", height: "auto" }}
-              />
-              <img
-                src={reactLogo}
-                alt="React Logo"
-                style={{ width: "20%", height: "auto" }}
-              />
-            </div>
-          </article>
-          <article>
-            <h3>Back-End Stacks</h3>
-            <p>For the Back-End I used : NodeJS / MySQL</p>
-            <div>
-              <img
-                src={nodejsLogo}
-                alt="Node JS Logo"
-                style={{ width: "20%", height: "auto" }}
-              />
-              <img
-                src={sqlLogo}
-                alt="SQL Logo"
-                style={{ width: "20%", height: "auto" }}
-              />
-            </div>
-          </article>
+            <h2>Stacks</h2>
+            <article>
+              <h3>Front-End Stacks</h3>
+              <p>
+                For the Front-End I used : Html / CSS / SASS / JavaScrip / React
+              </p>
+              <div>
+                <img
+                  src={htmlLogo}
+                  alt="HTML Logo"
+                  style={{ width: "20%", height: "auto" }}
+                />
+                <img
+                  src={cssLogo}
+                  alt="CSS Logo"
+                  style={{ width: "20%", height: "auto" }}
+                />
+                <img
+                  src={jsLogo}
+                  alt="JavaScrip Logo"
+                  style={{ width: "20%", height: "auto" }}
+                />
+                <img
+                  src={reactLogo}
+                  alt="React Logo"
+                  style={{ width: "20%", height: "auto" }}
+                />
+              </div>
+            </article>
+            <article>
+              <h3>Back-End Stacks</h3>
+              <p>For the Back-End I used : NodeJS / MySQL</p>
+              <div>
+                <img
+                  src={nodejsLogo}
+                  alt="Node JS Logo"
+                  style={{ width: "20%", height: "auto" }}
+                />
+                <img
+                  src={sqlLogo}
+                  alt="SQL Logo"
+                  style={{ width: "20%", height: "auto" }}
+                />
+              </div>
+            </article>
+          </div>
         </>
       ),
     },
+    //PortFolio
     {
       title: "🔗 My PortFolio",
       description: "PortFolio | Site Developpeur",
@@ -144,7 +151,7 @@ function App() {
           <p>
             For the Front-End I used : Html / CSS / SASS / JavaScrip / React
           </p>
-          <p>
+          <div>
             <img
               src={htmlLogo}
               alt="HTML Logo"
@@ -165,11 +172,11 @@ function App() {
               alt="React Logo"
               style={{ width: "20%", height: "auto" }}
             />
-          </p>
+          </div>
         </>
       ),
     },
-
+    //IOS APP
     {
       title: "🔗 IOS app",
       description: "IOS app | SwiftUI",
@@ -189,7 +196,7 @@ function App() {
           </p>
           <h2>Stacks</h2>
           <p>For this app I used : SwiftUI and Xcode</p>
-          <p>
+          <div>
             <img
               src={iosApp1}
               alt="IOS app "
@@ -210,10 +217,11 @@ function App() {
               alt="screenshot of app"
               style={{ width: "25%", height: "auto", margin: "20px" }}
             />
-          </p>
+          </div>
         </>
       ),
     },
+    //aqua-calcul
     {
       title: "🔗 Aqua-Calcul",
       description: "Projet utilitaire | Site for productivity",
@@ -278,6 +286,87 @@ function App() {
               <img
                 src={reactLogo}
                 alt="React Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+            </div>
+          </article>
+        </>
+      ),
+    },
+    //site gestion bassin saint pierre
+    {
+      title: "🔗 Gestion Bassin Saint Pierre",
+      description: "Projet utilitaire | Site for productivity",
+      img: GestionB1,
+      details: (
+        <>
+          <a href="https://nickodev974.github.io/volume-st-pierre/">
+            🔗🔗 Link to the website 🔗🔗
+          </a>
+          <img
+            src={GestionB1}
+            alt="Web site Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <img
+            src={GestionB2}
+            alt="Web site Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+          <h3>Mobile version</h3>
+          <img
+            src={GestionB3}
+            alt="Web site Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+
+          <img
+            src={GestionB4}
+            alt="IOS App Aqua-Calcul"
+            style={{ width: "100%", height: "auto" }}
+          />
+
+          <p>
+            This website is an assistant application designed to help calculate
+            the volume of the store’s ponds based on their water height. It also
+            uses a Firebase database to keep track of all actions performed on
+            each pond.
+          </p>
+          <h2>Stacks</h2>
+          <article>
+            <h3>Front-End Stacks</h3>
+            <p>
+              For the Front-End I used : Html / CSS / SASS / JavaScrip / React
+            </p>
+            <div>
+              <img
+                src={htmlLogo}
+                alt="HTML Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+
+              <img
+                src={cssLogo}
+                alt="CSS Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+              <img
+                src={jsLogo}
+                alt="JavaScrip Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+              <img
+                src={reactLogo}
+                alt="React Logo"
+                style={{ width: "20%", height: "auto" }}
+              />
+            </div>
+            <h3>Back-End Stacks</h3>
+            <p>For the Back-End I used : Firebase </p>
+            <div>
+              <img
+                src={firebaseLogo}
+                alt="Firebase Logo"
                 style={{ width: "20%", height: "auto" }}
               />
             </div>
@@ -407,6 +496,9 @@ function App() {
             <span className="lettre">S</span>
           </h1>
           <p>Fullstack JavaScript Developer</p>
+          <p className="sitation">
+            “ Adapt. Structure. Share. That’s how I lead. "
+          </p>
         </article>
       </section>
       <section
@@ -477,18 +569,24 @@ function App() {
           <Slider {...settings}>
             {projects.map((project, index) => (
               <article key={index} className="portfolio">
-                <h3>
-                  <a href="#!" onClick={() => openModal(project)}>
-                    {project.title}
-                  </a>
-                </h3>
-                <img
-                  src={project.img}
-                  alt={project.title}
+                <button
                   onClick={() => openModal(project)}
-                  style={{ cursor: "pointer", width: "80%", height: "auto" }}
-                />
-                <p>{project.description}</p>
+                  style={{
+                    all: "unset",
+                    cursor: "pointer",
+                    display: "block",
+                    width: "100%",
+                    textAlign: "center",
+                  }}
+                >
+                  <h3>{project.title}</h3>
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    // style={{ width: "80%", height: "auto" }}
+                  />
+                  <p>{project.description}</p>
+                </button>
               </article>
             ))}
           </Slider>
@@ -569,7 +667,7 @@ function App() {
               &times;
             </span>
             <h3 className="titleModal">{selectedProject.title}</h3>
-            <p>{selectedProject.details}</p>
+            <div>{selectedProject.details}</div>
             {/* Ajoutez plus de détails et des images si nécessaire */}
           </div>
         </div>

@@ -5,7 +5,7 @@ header {
   z-index: 999;
   width: 100%;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.45);
+  /* background-color: rgba(0, 0, 0, 0.45); */
   color: white;
   height: 3rem;
   align-items: center;
@@ -31,7 +31,7 @@ nav a {
 
 nav a:hover {
   color: greenyellow;
-  scale: 1.2;
+  scale: 2;
 }
 
 ul {
@@ -53,9 +53,10 @@ li {
 .burger-menu {
   display: none;
   font-size: 2rem;
+  font-weight: bold;
   background: none;
   border: none;
-  color: white;
+  color: rgb(250, 252, 250);
   cursor: pointer;
   margin-left: auto;
 }
@@ -69,6 +70,7 @@ li {
   background-image: url(./assets/dev.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   justify-content: center;
   align-items: center;
 }
@@ -182,6 +184,11 @@ li {
   color: aliceblue;
   text-align: center;
 }
+.who .sitation {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: medium;
+}
 
 /* Styles pour la section .presentation */
 .presentation {
@@ -219,9 +226,9 @@ li {
   width: 100%;
 }
 .competences img:hover {
-  filter: drop-shadow(5px 5px 5px white);
-  /* scale: 1.4; */
-  transform: skew(20deg, -20deg);
+  filter: drop-shadow(5px 5px 5px rgb(136, 136, 136));
+  scale: 1.8;
+  /* transform: skew(20deg, -20deg); */
 }
 
 .competences {
@@ -264,6 +271,7 @@ li {
 .projetBox {
   display: flex;
   flex-direction: column;
+
   /* align-items: center;
    */
 }
@@ -279,10 +287,44 @@ li {
 
 .imgProjet {
   background-color: blue;
-  width: 100%;
+  width: 80%;
+
   height: 8rem;
   margin: 0 auto;
 }
+/* Centrage et occupation de l'espace pour .portfolio et ses enfants */
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.portfolio button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1rem;
+}
+/* .portfolio h3 {
+  font-size: 2rem;
+} */
+.portfolio h3:hover {
+  scale: 1.5;
+  text-shadow: 5px 5px 5px rgb(36, 36, 36);
+}
+
+.portfolio h3,
+.portfolio p {
+  margin: 1.5rem;
+}
+
 .portfolio img {
   cursor: pointer;
   transition: transform 0.3s;
@@ -299,7 +341,8 @@ li {
 
 /* Pour positionner les points en bas du carrousel */
 .slick-dots {
-  bottom: -30px; /* Ajustez cette valeur selon vos besoins */
+  max-height: 80%;
+  bottom: -30px;
   background-color: transparent;
 }
 
@@ -320,10 +363,15 @@ li {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  a {
+    color: rgb(0, 4, 255);
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 }
 
 .modal.show {
-  display: flex; /* Affiche la modal lorsqu'elle a la classe 'show' */
+  display: flex;
 }
 
 .modal-content {
@@ -338,6 +386,11 @@ li {
   position: relative;
   max-height: 80%; /* Limite la hauteur maximale du modal */
   overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+  img {
+    margin-top: 1rem;
+
+    border-radius: 10px;
+  }
 }
 
 .close {
@@ -443,7 +496,7 @@ video {
 }
 
 /* --------------------burger menu------------------ */
-@media (max-width: 768px) {
+@media (max-width: 2000px) {
   /* Styles pour le menu burger */
   ul {
     z-index: 99;
@@ -453,7 +506,7 @@ video {
     position: absolute;
     top: 3rem;
     left: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.518);
   }
 
   ul.menu-open {
@@ -467,6 +520,7 @@ video {
 
   .burger-menu {
     display: block;
+    padding: 3rem;
   }
 }
 
